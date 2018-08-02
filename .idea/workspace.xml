@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3dee70fd-6ba6-4eb9-a5f5-8fbabcc3bef4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -30,7 +29,7 @@
           <entry key="erb" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="md" value="2" />
-          <entry key="rb" value="1" />
+          <entry key="rb" value="4" />
           <entry key="yml" value="3" />
         </counts>
       </usages-collector>
@@ -39,7 +38,7 @@
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="RHTML" value="1" />
-          <entry key="Ruby" value="1" />
+          <entry key="Ruby" value="4" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -48,6 +47,7 @@
           <entry key="erb" value="8" />
           <entry key="gitignore" value="42" />
           <entry key="md" value="296" />
+          <entry key="rb" value="9" />
           <entry key="yml" value="64" />
         </counts>
       </usages-collector>
@@ -56,7 +56,7 @@
           <entry key="Markdown" value="295" />
           <entry key="PLAIN_TEXT" value="42" />
           <entry key="RHTML" value="8" />
-          <entry key="Ruby" value="1" />
+          <entry key="Ruby" value="10" />
           <entry key="YAML" value="64" />
         </counts>
       </usages-collector>
@@ -65,19 +65,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/secrets.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/app/models/skill.rb">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.erb">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20180802121329_create_skills.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" selection-start-column="12" selection-end-column="12" />
+            <state relative-caret-position="60">
+              <caret line="4" column="15" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -103,6 +99,7 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/config/secrets.yml" />
         <option value="$PROJECT_DIR$/app/views/pages/home.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20180802121329_create_skills.rb" />
       </list>
     </option>
   </component>
@@ -298,12 +295,12 @@
       <workItem from="1531915130207" duration="1576000" />
       <workItem from="1531985582755" duration="2653000" />
       <workItem from="1533026099684" duration="178000" />
-      <workItem from="1533199020043" duration="3159000" />
+      <workItem from="1533199020043" duration="4019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12539000" />
+    <option name="totallyTimeSpent" value="13399000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-4" width="1920" height="1084" extended-state="6" />
@@ -447,8 +444,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/skill.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180802121329_create_skills.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="15" />
         </state>
       </provider>
     </entry>
