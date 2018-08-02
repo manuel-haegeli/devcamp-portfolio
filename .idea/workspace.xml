@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dee70fd-6ba6-4eb9-a5f5-8fbabcc3bef4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/portfolios/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/portfolios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/portfolios_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/portfolios/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/portfolios/index.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -30,7 +27,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
-          <entry key="erb" value="8" />
+          <entry key="erb" value="9" />
           <entry key="gitignore" value="1" />
           <entry key="md" value="2" />
           <entry key="rb" value="13" />
@@ -42,7 +39,7 @@
           <entry key="CSS" value="1" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="RHTML" value="8" />
+          <entry key="RHTML" value="9" />
           <entry key="Ruby" value="13" />
           <entry key="YAML" value="3" />
         </counts>
@@ -50,10 +47,10 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1" />
-          <entry key="erb" value="311" />
+          <entry key="erb" value="328" />
           <entry key="gitignore" value="42" />
           <entry key="md" value="296" />
-          <entry key="rb" value="630" />
+          <entry key="rb" value="706" />
           <entry key="yml" value="64" />
         </counts>
       </usages-collector>
@@ -62,8 +59,8 @@
           <entry key="CSS" value="1" />
           <entry key="Markdown" value="295" />
           <entry key="PLAIN_TEXT" value="42" />
-          <entry key="RHTML" value="311" />
-          <entry key="Ruby" value="631" />
+          <entry key="RHTML" value="328" />
+          <entry key="Ruby" value="707" />
           <entry key="YAML" value="64" />
         </counts>
       </usages-collector>
@@ -74,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/blogs_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="58" column="41" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="41" />
+            <state relative-caret-position="615">
+              <caret line="41" selection-start-line="41" selection-end-line="51" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -92,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/portfolios/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -101,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/portfolios_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+            <state relative-caret-position="465">
+              <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -120,6 +117,7 @@
       <find>notice</find>
       <find>secret_</find>
       <find>92fa27998921d31bfe1bcc40f9bb7c56ee295fd386c95a33601546542e2972c3655693e3f166d7085fdd1820d8df95969d6d541c5c187a4bcc7f5214cd</find>
+      <find>set_blo</find>
       <find>blogs_url</find>
     </findStrings>
   </component>
@@ -139,6 +137,7 @@
         <option value="$USER_HOME$/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/generators/rails/scaffold/templates/scaffold.css" />
         <option value="$PROJECT_DIR$/app/views/portfolios/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/portfolios/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/portfolios/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/portfolios_controller.rb" />
       </list>
     </option>
@@ -160,7 +159,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1889" />
     <option name="y" value="24" />
     <option name="width" value="1918" />
@@ -212,6 +211,13 @@
             <path>
               <item name="DevcampPortfolio" type="b2602c69:ProjectViewProjectNode" />
               <item name="DevcampPortfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="portfolios" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DevcampPortfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DevcampPortfolio" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -227,7 +233,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Ruby" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -365,13 +371,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17506000" />
+    <option name="totallyTimeSpent" value="18879000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-4" width="1920" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26307365" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26307365" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" />
@@ -555,22 +561,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/portfolios/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/portfolios/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/blogs_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="58" column="41" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="41" />
+        <state relative-caret-position="615">
+          <caret line="41" selection-start-line="41" selection-end-line="51" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/portfolios_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        <state relative-caret-position="465">
+          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
         </state>
       </provider>
     </entry>
