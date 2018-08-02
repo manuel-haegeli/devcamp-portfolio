@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio, only: %i[edit update]
+  before_action :set_portfolio, only: %i[show edit update destroy]
 
   def index
     @portfilio_items = Portfolio.all
@@ -14,7 +14,7 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       if @portfolio.save
-        format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully created.' }
+        format.html { redirect_to portfolios_path, notice: 'Portfolio item was successfully created.' }
         format.json { render :index, status: :created, location: @portfolio }
       else
         format.html { render :new }
@@ -29,7 +29,7 @@ class PortfoliosController < ApplicationController
   def update
     respond_to do |format|
       if @portfilio_item.update(portfolio_params)
-        format.html { redirect_to portfolios_path, notice: 'Blog was successfully updated.' }
+        format.html { redirect_to portfolios_path, notice: 'Portfolio item was successfully updated.' }
         format.json { render :show, status: :ok, location: @portfolio }
       else
         format.html { render :edit }
@@ -37,6 +37,16 @@ class PortfoliosController < ApplicationController
       end
     end
   end
+
+  def destroy
+    @portfilio_item.destroy
+    respond_to do |format|
+      format.html { redirect_to portfolios_path, notice: 'Portfolio item was successfully deleted.' }
+      format.json { head :no_content }
+    end
+  end
+
+  private
 
   def set_portfolio
     @portfilio_item = Portfolio.find(params[:id])
