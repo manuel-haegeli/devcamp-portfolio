@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Portfolios describes highlighted past projects
 class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: %i[show edit update destroy]
 
@@ -23,8 +26,7 @@ class PortfoliosController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     respond_to do |format|
@@ -50,6 +52,8 @@ class PortfoliosController < ApplicationController
 
   def set_portfolio
     @portfilio_item = Portfolio.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    raise ActionController::RoutingError, 'Not Found'
   end
 
   def portfolio_params
