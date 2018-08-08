@@ -51,7 +51,7 @@ class PortfoliosController < ApplicationController
   private
 
   def set_portfolio
-    @portfilio_item = Portfolio.find(params[:id])
+    @portfilio_item = Portfolio.friendly.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     raise ActionController::RoutingError, 'Not Found'
   end
