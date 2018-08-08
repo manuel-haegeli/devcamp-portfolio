@@ -2,6 +2,7 @@
 
 # A highlighted past project
 class Portfolio < ApplicationRecord
+  include Placeholder
   extend FriendlyId
   friendly_id :title, use: :slugged
 
@@ -10,7 +11,7 @@ class Portfolio < ApplicationRecord
   after_initialize :set_defaults
 
   def set_defaults
-    self.main_image ||= 'http://via.placeholder.com/600x400'
-    self.thumbnail_image ||= 'http://via.placeholder.com/350x200'
+    self.main_image ||= Placeholder.image(width: 600, height: 400)
+    self.thumbnail_image ||= Placeholder.image(width: 350, height: 200)
   end
 end
