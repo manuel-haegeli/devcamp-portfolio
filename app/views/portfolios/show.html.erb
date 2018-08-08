@@ -15,7 +15,7 @@
   <%= @portfilio_item.body %>
 </p>
 
-<%= image_tag @portfilio_item.thumbnail_image unless @portfilio_item.thumbnail_image.nil? %><br/>
+<%= image_tag @portfilio_item.main_image unless @portfilio_item.main_image.nil? %><br/>
 
 <%= link_to 'Edit', edit_portfolio_path(@portfilio_item) %> |
 <%= link_to 'Back', portfolios_path %>
