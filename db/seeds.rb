@@ -43,3 +43,10 @@ end
   )
 end
 p '9 portfolio items created'
+
+3.times do |i|
+  Portfolio.last.technologies.create!(
+    name: "Technology #{i}",
+  )
+end
+p '3 technologies created'

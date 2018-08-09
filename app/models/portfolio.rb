@@ -2,6 +2,7 @@
 
 # A highlighted past project
 class Portfolio < ApplicationRecord
+  has_many :technologies
   include Placeholder
   extend FriendlyId
   friendly_id :title, use: :slugged
