@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @portfilio_item.main_image unless @portfilio_item.main_image.nil? %><br/>
+
 <p>
   <strong>Title:</strong>
   <%= @portfilio_item.title %>
@@ -15,7 +17,12 @@
   <%= @portfilio_item.body %>
 </p>
 
-<%= image_tag @portfilio_item.main_image unless @portfilio_item.main_image.nil? %><br/>
+<h2>Technologies Used:</h2>
+<ul>
+<%@portfilio_item.technologies.each do |technology| %>
+  <li><%= technology.name %></li>
+<% end %>
+</ul>
 
 <%= link_to 'Edit', edit_portfolio_path(@portfilio_item) %> |
 <%= link_to 'Back', portfolios_path %>

@@ -2,7 +2,6 @@
 
 <%= form_with(model: @portfilio_item, local: true) do |form| %>
 
-
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
@@ -17,6 +16,16 @@
     <%= form.label :body %>
     <%= form.text_area :body %>
   </div>
+
+  <h2>Technologies</h2>
+  <ul>
+    <%= form.fields_for :technologies do |technology_form| %>
+      <li>
+        <%= technology_form.label :name %>
+        <%= technology_form.text_field :name %>
+      </li>
+    <% end %>
+  </ul>
 
   <div class="actions">
     <%= form.submit %>
