@@ -27,3 +27,6 @@
 
 # Dont show secrets
 /config/secrets.yml
+
+# Dont add workspace
+/.idea/workspace.xml
