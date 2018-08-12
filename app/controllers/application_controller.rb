@@ -3,4 +3,5 @@ class ApplicationController < ActionController::Base
   include DeviseWhitelist
   include SocialmediaReferral
   include Guestuser
+  include PageDefaultsConcern
 end

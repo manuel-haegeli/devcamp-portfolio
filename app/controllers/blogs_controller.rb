@@ -3,6 +3,7 @@
 # Blog entry controller
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy toggle_status]
+  before_action :page_title
 
   # GET /blogs
   # GET /blogs.json
@@ -13,6 +14,14 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show; end
+
+  def page_title
+    @page_title = if @blog
+                    params[:action] + ' - ' + @blog.title
+                  else
+                    params[:action] + ' - ' + controller_name
+                  end
+  end
 
   # GET /blogs/new
   def new
