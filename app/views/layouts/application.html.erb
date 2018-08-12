@@ -19,5 +19,7 @@
     <%= link_to 'Register', new_user_registration_path unless current_user %>
 
     <%= yield %>
+
+  <p><%= p "Thanks for visiting me from " + session[:referral] if session[:referral]  %></p>
   </body>
 </html>
