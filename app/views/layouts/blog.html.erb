@@ -24,7 +24,7 @@
 
     <%= yield %>
 
-    <%= render "layouts/nav" %>
+    <%= render "layouts/nav", css_class: 'navigation_bottom' %>
 
   <p><%= p "Thanks for visiting me from " + session[:referral] if session[:referral]  %></p>
   </body>
