@@ -3,6 +3,7 @@
 # Portfolios describes highlighted past projects
 class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: %i[show edit update destroy]
+  layout 'portfolio'
 
   def index
     @portfilio_items = Portfolio.all
