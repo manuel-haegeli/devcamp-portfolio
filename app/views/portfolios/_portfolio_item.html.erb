@@ -1,0 +1,18 @@
+<div>
+  <div style="float:left; width: 400px">
+    <%= image_tag portfolio_item.thumbnail_image unless portfolio_item.thumbnail_image.nil? %>
+  </div>
+  <div style="float:left; width: 300px">
+    <p><b>Title</b> <%= portfolio_item.title %></p>
+    <p><b>SubTitle</b> <%= portfolio_item.subtitle %></p>
+    <p><b>Body</b> <%= portfolio_item.body %></p>
+  </div>
+  <div style="clear:both"></div>
+
+
+
+  <td><%= link_to 'Show', show_portfolio_path(portfolio_item) %></td>
+  <td><%= link_to 'Edit', edit_portfolio_path(portfolio_item) %></td>
+  <td><%= link_to 'Delete', portfolio_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</div>
+<hr/>
