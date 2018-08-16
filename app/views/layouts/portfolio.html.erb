@@ -14,11 +14,8 @@
     <p class="alert"><%= alert %></p>
 
     <%= render "layouts/nav", css_class: 'navigation_top' %>
-
     <%= login_helper %>
-
     <%= yield %>
-
-  <p><%= p "Thanks for visiting me from " + session[:referral] if session[:referral]  %></p>
+    <%= referral_helper %>
   </body>
 </html>
