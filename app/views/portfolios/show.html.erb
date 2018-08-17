@@ -24,7 +24,7 @@
 <% end %>
 </ul>
 
-<%= link_to 'Edit', edit_portfolio_path(@portfilio_item) %> |
+<%= link_to 'Edit', edit_portfolio_path(@portfilio_item) if logged_in?(:site_admin) %> |
 <%= link_to 'Back', portfolios_path %>
 
 <hr/>
