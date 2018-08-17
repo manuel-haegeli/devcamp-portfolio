@@ -14,4 +14,8 @@ module ApplicationHelper
   def referral_helper
     content_tag(:p, "Thanks for visiting me from #{session[:referral]}") if session[:referral]
   end
+
+  def copyright_helper
+    @copyright = DevcampViewTool::Renderer.copyright 'Manuel Hägeli', 'All rights reserved'
+  end
 end
