@@ -1,4 +1,4 @@
+<%= paginate @blogs %>
 <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
 <%= render @blogs %>
-
-
+<%= paginate @blogs %>
