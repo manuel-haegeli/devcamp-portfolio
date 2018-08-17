@@ -12,7 +12,7 @@
 
 
   <td><%= link_to 'Show', show_portfolio_path(portfolio_item) %></td>
-  <td><%= link_to 'Edit', edit_portfolio_path(portfolio_item) %></td>
-  <td><%= link_to 'Delete', portfolio_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <td><%= link_to 'Edit', edit_portfolio_path(portfolio_item) if logged_in?(:site_admin) %></td>
+  <td><%= link_to 'Delete', portfolio_item, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></td>
 </div>
 <hr/>
