@@ -1,18 +1,19 @@
-<div>
-  <div style="float:left; width: 400px">
-    <%= image_tag portfolio_item.thumbnail_image unless portfolio_item.thumbnail_image.nil? %>
+<div class="col-md-4">
+  <div class="card mb-4 shadow-sm">
+     <%= image_tag portfolio_item.thumbnail_image, class: 'card-img-top', alt: portfolio_item.title unless portfolio_item.thumbnail_image.nil? %>
+    <div class="card-body">
+      <p class="card-text"><%= portfolio_item.subtitle %></p>
+      <p class="card-text"><%= portfolio_item.body %></p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <%= link_to 'View', show_portfolio_path(portfolio_item), class: 'btn btn-sm btn-outline-secondary' %>
+          <% if logged_in?(:site_admin) %>
+            <%= link_to 'Edit', edit_portfolio_path(portfolio_item), class: 'btn btn-sm btn-outline-secondary'  %>
+            <%= link_to 'Delete', portfolio_item, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-secondary' %>
+          <% end %>
+        </div>
+        <small class="text-muted">Published <%= distance_of_time_in_words(portfolio_item.created_at, Time.now) %> ago</small>
+      </div>
+    </div>
   </div>
-  <div style="float:left; width: 300px">
-    <p><b>Title</b> <%= portfolio_item.title %></p>
-    <p><b>SubTitle</b> <%= portfolio_item.subtitle %></p>
-    <p><b>Body</b> <%= portfolio_item.body %></p>
-  </div>
-  <div style="clear:both"></div>
-
-
-
-  <td><%= link_to 'Show', show_portfolio_path(portfolio_item) %></td>
-  <td><%= link_to 'Edit', edit_portfolio_path(portfolio_item) if logged_in?(:site_admin) %></td>
-  <td><%= link_to 'Delete', portfolio_item, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></td>
 </div>
-<hr/>
