@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,12 +12,17 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render "layouts/portfolio_nav" %>
 
-    <%= render "layouts/nav", css_class: 'navigation_top' %>
-    <%= login_helper %>
-    <%= yield %>
-    <%= referral_helper %>
+    <main role="main">
+       <%= render "layouts/portfolio_header" unless logged_in?(:site_admin) %>
+      <div class="album py-5 bg-light">
+        <div class="container">
+            <%= yield %>
+        </div>
+      </div>
+    </main>
+    <%= render 'layouts/portfolio_footer' %>
+
   </body>
 </html>

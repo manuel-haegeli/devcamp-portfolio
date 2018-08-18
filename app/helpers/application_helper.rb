@@ -1,13 +1,15 @@
 module ApplicationHelper
-  def login_helper
+  def login_helper(style = '')
     if current_user.is_a?(GuestUser)
-      (link_to 'Login', new_user_session_path) +
-        content_tag(:br) +
-        (link_to 'Register', new_user_registration_path)
+      [
+        (link 'Login', new_user_session_path, style),
+        (link 'Register', new_user_registration_path, style)
+      ]
     else
-      (link_to 'Logout', destroy_user_session_path, method: :delete) +
-        content_tag(:br) +
-        (link_to 'Userprofile', edit_user_registration_path)
+      [
+        (link_to 'Logout', destroy_user_session_path, method: :delete, class: "#{style} #{active? destroy_user_session_path}"),
+        (link 'Userprofile', edit_user_registration_path, style)
+      ]
     end
   end
 
@@ -16,6 +18,28 @@ module ApplicationHelper
   end
 
   def copyright_helper
-    @copyright = DevcampViewTool::Renderer.copyright 'Manuel Hägeli', 'All rights reserved'
+    @copyright = DevcampViewTool::Renderer.copyright portfolio_brand, 'All rights reserved'
+  end
+
+  def portfolio_brand
+    'Manuel Hägeli'
+  end
+
+  def nav_list(style = '')
+    [
+      (link 'Home', root_path, style),
+      (link 'About Me', about_path, style),
+      (link 'Contact', contact_path, style),
+      (link 'Blog', blogs_path, style),
+      (link 'Portfolio', portfolios_path, style)
+    ]
+  end
+
+  def active?(path)
+    'active' if current_page? path
+  end
+
+  def link(name, path, style)
+    link_to name, path, class: "#{style} #{active? path}"
   end
 end

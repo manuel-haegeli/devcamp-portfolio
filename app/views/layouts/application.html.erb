@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,13 +12,14 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <%= render "layouts/nav", css_class: 'navigation_top' %>
-    <%= login_helper %>
-    <%= yield %>
-    <%= referral_helper %>
-    <%= copyright_helper %>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <%= render "layouts/application_nav" %>
+      <main role="main" class="inner cover">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+      </main>
+      <%= render "layouts/application_footer" %>
+    </div>
   </body>
 </html>

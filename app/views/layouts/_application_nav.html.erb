@@ -1,0 +1,13 @@
+<header class="masthead mb-auto">
+  <div class="inner">
+    <h3 class="masthead-brand"><%= portfolio_brand %></h3>
+    <nav class="nav nav-masthead justify-content-center">
+      <% (nav_list 'nav-link').each do |nav| %>
+        <%= nav %>
+      <% end %>
+      <% (login_helper 'nav-link').each do |login| %>
+        <%= login %>
+      <% end %>
+    </nav>
+  </div>
+</header>
