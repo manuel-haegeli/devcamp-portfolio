@@ -1,26 +1,19 @@
 <%= form_with(model: blog, local: true) do |form| %>
   <div class="form-group">
   <% if blog.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
-
-      <ul>
-      <% blog.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+    <% blog.errors.full_messages.each do |message| %>
+        <%= generate_alert message %>
+    <% end %>
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, class: 'form-control' %>
+    <%= form.text_field :title, class: 'form-control', placeholder: 'Title' %>
   </div>
 
   <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body, class: 'form-control', rows: 15 %>
+    <%= form.text_area :body, class: 'form-control', rows: 15, placeholder: 'Content' %>
   </div>
+
   </div>
     <%= form.submit "Submit", class: 'btn btn-primary' %>
 <% end %>

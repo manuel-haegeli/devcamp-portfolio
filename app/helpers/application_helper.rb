@@ -42,4 +42,13 @@ module ApplicationHelper
   def link(name, path, style)
     link_to name, path, class: "#{style} #{active? path}"
   end
+
+  def alerts(message = '')
+    alert = (flash[:alert] || flash[:error] || flash[:notice] || message)
+    generate_alert alert
+  end
+
+  def generate_alert(message = '')
+    js add_gritter(message, title: portfolio_brand, sticky: false) if message
+  end
 end
