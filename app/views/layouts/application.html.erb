@@ -24,13 +24,10 @@
       %>
       <%= render "layouts/application_nav" %>
       <main role="main" class="inner cover">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
         <%= yield %>
       </main>
       <%= render "layouts/application_footer" %>
-      <%= render "shared/alerts" %>
-
+      <%= alerts %>
     </div>
   </body>
 </html>

@@ -2,7 +2,7 @@
   <div class="form-group">
   <% if @portfilio_item.errors.any? %>
     <% @portfilio_item.errors.full_messages.each do |message| %>
-        <%= js add_gritter(message, title: "Manuel Hägeli Portfolio", sticky: false) %>
+        <%= generate_alert message %>
     <% end %>
   <% end %>
 
