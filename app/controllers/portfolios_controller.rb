@@ -24,15 +24,15 @@ class PortfoliosController < ApplicationController
   end
 
   def create
-    @portfolio = Portfolio.new(portfolio_params)
+    @portfilio_item = Portfolio.new(portfolio_params)
 
     respond_to do |format|
-      if @portfolio.save
+      if @portfilio_item.save
         format.html { redirect_to portfolios_path, notice: 'Portfolio item was successfully created.' }
-        format.json { render :index, status: :created, location: @portfolio }
+        format.json { render :index, status: :created, location: @portfilio_item }
       else
         format.html { render :new }
-        format.json { render json: @portfolio.errors, status: :unprocessable_entity }
+        format.json { render json: @portfilio_item.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,7 +43,7 @@ class PortfoliosController < ApplicationController
     respond_to do |format|
       if @portfilio_item.update(portfolio_params)
         format.html { redirect_to portfolios_path, notice: 'Portfolio item was successfully updated.' }
-        format.json { render :show, status: :ok, location: @portfolio }
+        format.json { render :show, status: :ok, location: @portfilio_item }
       else
         format.html { render :edit }
         format.json { render json: @portfilio_item.errors, status: :unprocessable_entity }
@@ -72,6 +72,8 @@ class PortfoliosController < ApplicationController
       :title,
       :subtitle,
       :body,
+      :main_image,
+      :thumbnail_image,
       technologies_attributes: [:name]
     )
   end

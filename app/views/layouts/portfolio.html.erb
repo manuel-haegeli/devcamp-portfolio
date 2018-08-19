@@ -15,7 +15,9 @@
     <%= render "layouts/portfolio_nav" %>
 
     <main role="main">
-       <%= render "layouts/portfolio_header" unless logged_in?(:site_admin) %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= render "layouts/portfolio_header" unless logged_in?(:site_admin) %>
       <div class="album py-5 bg-light">
         <div class="container">
             <%= yield %>
