@@ -1,4 +1,4 @@
-<div class="col-md-4">
+<div class="col-md-4 draggable" data-id="<%= portfolio_item.id %>">
   <div class="card mb-4 shadow-sm">
      <%= image_tag portfolio_item.thumbnail_image, class: 'card-img-top', alt: portfolio_item.title unless portfolio_item.thumbnail_image.nil? %>
     <div class="card-body">
