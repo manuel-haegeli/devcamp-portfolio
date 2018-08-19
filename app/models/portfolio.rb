@@ -2,8 +2,10 @@
 
 # A highlighted past project
 class Portfolio < ApplicationRecord
-  has_many :technologies
-  accepts_nested_attributes_for :technologies, reject_if: ->(attributes) { attributes['name'].blank? }
+  has_many :technologies, dependent: :delete_all
+  accepts_nested_attributes_for :technologies,
+                                allow_destroy: true,
+                                reject_if: ->(attributes) { attributes['name'].blank? }
   extend FriendlyId
   friendly_id :title, use: :slugged
 
