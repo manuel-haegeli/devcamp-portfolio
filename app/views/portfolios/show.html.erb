@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-7">
-      <%= image_tag @portfilio_item.main_image unless @portfilio_item.main_image.nil? %>
+      <%= image_tag @portfilio_item.main_image.to_s, width: '100%' unless @portfilio_item.main_image.nil? %>
     </div>
     <div class="col-md-57">
       <h1><%= @portfilio_item.title %></h1>
