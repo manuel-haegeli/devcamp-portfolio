@@ -1,0 +1,11 @@
+<div>
+  <h3>Comment form</h3>
+  <%= form_for @comment, url: '#' do |comment_form| %>
+    <div class='form-group'>
+      <%= comment_form.label :content %>
+      <%= comment_form.text_area :content, class: 'form-control' %>
+    </div>
+
+    <%= comment_form.submit 'Post Comment', class: 'btn btn-primary' %>
+  <% end %>
+</div>
