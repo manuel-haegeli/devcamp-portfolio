@@ -6,7 +6,9 @@
   <%= @blog.body %>
 
   <%= render 'comments/comment_form' unless current_user.is_a? GuestUser %>
-  <%= render @blog.comments %>
+  <div class="blog_comments" data-blog-id='<%= @blog.id %>'>
+    <%= render @blog.comments %>
+  </div>
 </div>
 
 
