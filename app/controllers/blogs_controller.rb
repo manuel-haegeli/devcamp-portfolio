@@ -10,7 +10,11 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.recent.page(params[:page]).per(5)
+    @blogs = if current_user.is_a?(GuestUser) || current_user.role != :site_admin
+               Blog.recent.published.page(params[:page]).per(5)
+             else
+               Blog.recent.page(params[:page]).per(5)
+             end
   end
 
   # GET /blogs/1
@@ -92,6 +96,10 @@ class BlogsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def blog_params
-    params.require(:blog).permit(:title, :body)
+    params.require(:blog).permit(
+      :title,
+      :body,
+      topic_attributes: %i[id title _destroy]
+    )
   end
 end
