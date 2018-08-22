@@ -9,5 +9,7 @@ class Blog < ApplicationRecord
 
   validates_presence_of :title, :body
 
+  scope :recent, -> { order(created_at: :desc) }
+
   belongs_to :topic, optional: true
 end
