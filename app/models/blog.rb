@@ -10,7 +10,6 @@ class Blog < ApplicationRecord
   validates_presence_of :title, :body
 
   scope :recent, -> { order(created_at: :desc) }
-  scope :published, -> { where(status: 'published') }
 
   belongs_to :topic, optional: true
 end

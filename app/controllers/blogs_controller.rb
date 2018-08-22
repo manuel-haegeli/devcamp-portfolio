@@ -10,11 +10,11 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = if current_user.is_a?(GuestUser) || current_user.role != :site_admin
-               Blog.recent.published.page(params[:page]).per(5)
-             else
-               Blog.recent.page(params[:page]).per(5)
-             end
+    if logged_in? :site_admin
+      @blogs = Blog.recent.page(params[:page]).per(5)
+      return
+    end
+    @blogs = Blog.recent.published.page(params[:page]).per(5)
   end
 
   # GET /blogs/1
