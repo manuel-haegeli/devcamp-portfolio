@@ -103,7 +103,7 @@ class BlogsController < ApplicationController
     params.require(:blog).permit(
       :title,
       :body,
-      topic_attributes: %i[id title _destroy]
+      :topic_id
     )
   end
 end

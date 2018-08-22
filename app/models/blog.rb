@@ -7,7 +7,7 @@ class Blog < ApplicationRecord
   enum status: { draft: 0, published: 1 }
   has_many :comments, dependent: :destroy
 
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :topic
 
   scope :recent, -> { order(created_at: :desc) }
 
