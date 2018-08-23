@@ -1,9 +1,24 @@
-<h1>Pages#about</h1>
+<h1>About me</h1>
 
 
 <div class="row">
   <div class="col-md-4">
     <%= image_tag '600x400', width: 250, alt: "Profile Image" %>
+
+    <div class="mt-2">
+      <% @skills.each do |skill| %>
+        <h4><%= skill.title %></h4>
+        <div class="progress">
+          <div class="progres-bar progress-bar-striped bg-warning"
+               role="progressbar"
+               aria-valuenow="<%= skill.percent_utilized %>"
+               aria-valuemax="100"
+               style="width: <%= skill.percent_utilized %>%"
+          >
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
   <div class="col-md-8">
     <p>Find me in app/views/pages/about.html.erb</p>
