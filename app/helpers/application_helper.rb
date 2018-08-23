@@ -13,8 +13,8 @@ module ApplicationHelper
     end
   end
 
-  def referral_helper(containertype = :p)
-    content_tag(containertype, "Thanks for visiting me from #{session[:referral]}") if session[:referral]
+  def referral_helper(containertype = :p, style = '')
+    content_tag(containertype, "Thanks for visiting me from #{session[:referral]}, please feel free to #{ link_to 'contact me', contact_path }".html_safe, class: style) if session[:referral]
   end
 
   def copyright_helper
