@@ -4,8 +4,8 @@
     <li class="breadcrumb-item"><%= link_to 'Topics', topics_path %></li>
   </ol>
 </nav>
+
+<%= render 'blogs/admin_actions', blog: nil %>
 <%= paginate @blogs %>
-<%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
-<%= link_to 'Topics', topics_path %>
 <%= render @blogs %>
 <%= paginate @blogs %>
