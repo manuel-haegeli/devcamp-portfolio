@@ -1,3 +1,9 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Blogs</li>
+    <li class="breadcrumb-item"><%= link_to 'Topics', topics_path %></li>
+  </ol>
+</nav>
 <%= paginate @blogs %>
 <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
 <%= link_to 'Topics', topics_path %>
