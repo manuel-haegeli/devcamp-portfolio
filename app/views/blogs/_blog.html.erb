@@ -2,7 +2,7 @@
   <h2 class="blog-post-title"><%= link_to blog.title, blog %></h2>
   <p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago - <%= link_to blog.topic.title, topic_path(blog.topic) if blog.topic.present? %></p>
 
-  <%= blog.body %>
+  <%= markdown blog.body[0,200] %>
   <p>
     <% if logged_in?(:site_admin) %>
       <%= link_to blog.status, toggle_status_blog_path(blog) %>
