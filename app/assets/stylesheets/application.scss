@@ -1,6 +1,11 @@
 @import "bootstrap";
 @import "gritter";
 
+@font-face {
+  font-family: 'Source Sans Pro Regular';
+  src: font-url('SourceSansPro-Regular.ttf')
+}
+
 a,
 a:focus,
 a:hover {

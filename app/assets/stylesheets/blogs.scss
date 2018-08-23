@@ -2,6 +2,11 @@
 @import "font-awesome";
 @import "gritter";
 
+@font-face {
+  font-family: 'Source Sans Pro Regular';
+  src: font-url('SourceSansPro-Regular.ttf')
+}
+
 /* stylelint-disable selector-list-comma-newline-after */
 
 .blog-header {
@@ -10,7 +15,7 @@
 }
 
 .blog-header-logo {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-family: "Source Sans Pro Regular", "Playfair Display", Georgia, "Times New Roman", serif;
   font-size: 2.25rem;
 }
 
@@ -19,7 +24,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-family: "Source Sans Pro Regular", "Playfair Display", Georgia, "Times New Roman", serif;
 }
 
 .display-4 {

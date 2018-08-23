@@ -15,3 +15,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w[application.scss]
 Rails.application.config.assets.precompile += %w[blogs.css]
 Rails.application.config.assets.precompile += %w[portfolios.css]
+Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
